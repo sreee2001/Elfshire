@@ -1,7 +1,6 @@
-import Owl from './Owl';
-
+import ListGroup from "./components/ListGroup";
 function TownCenter() {
-    return <div><Owl /></div>;
+    return <div><ListGroup /></div>;
 }
 
 export default TownCenter;
