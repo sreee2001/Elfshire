@@ -1,3 +1,5 @@
+import "./styles/logo.css";
+import "./styles/navigation.css";
 import "./App.css";
 import NavigationMenu from "./navigation/NavigationMenu";
 import menuOptions from "./navigation/menu";

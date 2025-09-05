@@ -1,0 +1,27 @@
+.logo-sgsi a {
+  display: flex;           /* Place image and text side by side */
+  align-items: center;     /* Vertically center image and text */
+  /* Optional: add a border, background, or padding to the whole combo */
+}
+
+.logo-img {
+  width: auto;             /* Maintain image aspect ratio */
+  display: block;          /* Remove extra space below image */
+  height: 40px;            /* Set image height */
+}
+
+.logo-text {
+  background: rgb(3, 60, 77);   /* Set background color for text badge */
+  color: #fff;                  /* White text color */
+  font-size: 1.1rem;            /* Text size */
+  font-weight: bold;            /* Bold text */
+  letter-spacing: 1px;          /* Space between letters */
+  display: flex;                /* Stack text vertically */
+  flex-direction: column;       /* Vertical stacking for two lines */
+  align-items: center;          /* Center text horizontally */
+  justify-content: center;      /* Center text vertically */
+  height: 40px;                 /* Match image height */
+  padding: 0 1rem;              /* Horizontal padding */
+  border-radius: 0px;           /* No rounded corners (change if needed) */
+  line-height: 1.1;             /* Tighten line spacing */
+}
