@@ -1,18 +1,15 @@
 import { useState } from "react";
 
-function ListGroup() {
-  let fantasyItems = [
-    "Elven Sword",
-    "Dwarven Shield",
-    "Wizard's Staff",
-    "Dragon Scale",
-    "Phoenix Feather",
-  ];
+interface Props {
+  items: string[];
+  heading: string;
+}
 
+function ListGroup({ items, heading }: Props) {
   const [SelectedIndex, setSelectedIndex] = useState(-1);
 
   // convert to jsx
-  let listItems = fantasyItems.map((item, index) => (
+  let listItems = items.map((item, index) => (
     <li
       className={
         SelectedIndex === index ? "list-group-item active" : "list-group-item"
@@ -32,7 +29,7 @@ function ListGroup() {
 
   return (
     <>
-      <h1>List</h1>
+      <h1>{heading}</h1>
       {message}
       <ul className="list-group">{listItems}</ul>
     </>
