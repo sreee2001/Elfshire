@@ -8,9 +8,18 @@ function TownCenter() {
     "Dragon Scale",
     "Phoenix Feather",
   ];
+
+  const handleSelectItem = (item: string) => {
+    console.log(`Selected item: ${item}`);
+  };
+
   return (
     <div>
-      <ListGroup items={fantasyItems} heading="Fantasy Items" />
+      <ListGroup
+        items={fantasyItems}
+        heading="Fantasy Items"
+        onSelectItem={handleSelectItem}
+      />
     </div>
   );
 }
