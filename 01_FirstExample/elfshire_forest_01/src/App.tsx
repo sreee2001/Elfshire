@@ -1,15 +1,17 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import NavigationMenu from "./navigation/NavigationMenu";
+import menuOptions from "./navigation/menu";
+import ArtificialIntelligencePage from "./data/artificialIntelligence/page";
 import "./styles/logo.css";
 import "./styles/navigation.css";
 import "./App.css";
-import NavigationMenu from "./navigation/NavigationMenu";
-import menuOptions from "./navigation/menu";
-
-import aiContent from "./data/artificialIntelligence/pageContent";
 
 function App() {
   return (
-    <>
+    <Router>
       <div className="nav-outer">
+        {/* Company Logo and Name */}
         <div className="logo-sgsi">
           <a href="https://specglobalsolutions.com/" target="_blank">
             <img
@@ -23,10 +25,19 @@ function App() {
             </span>
           </a>
         </div>
+        {/* Navigation Menu */}
         <NavigationMenu menu={menuOptions} />
       </div>
-      <h1>SPEC Global Solutions Inc.</h1>
-    </>
+      {/* Define Routes for Different Pages */}
+      <Routes>
+        {/* Route for the Artificial Intelligence page */}
+        <Route
+          path="services/artificialintelligence"
+          element={<ArtificialIntelligencePage />}
+        />
+        {/* Add more routes here */}
+      </Routes>
+    </Router>
   );
 }
 

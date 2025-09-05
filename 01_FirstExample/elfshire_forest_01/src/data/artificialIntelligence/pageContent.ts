@@ -2,7 +2,7 @@
 export type PageContent = {
   title: string;
   subtitle: string;
-  sections: { heading: string; text: string }[];
+  sections: { text: string }[];
   services: string[];
   leadership: { name: string; title: string; bio: string }[];
   stats: { label: string; value: string }[];
@@ -14,20 +14,16 @@ const pagesContent: Record<string, PageContent> = {
     subtitle: "AI That Works for You",
     sections: [
       {
-        heading: "Support build-vs-buy decisions, team growth, and architecture",
-        text: "Empowering your organization to lead with clarity and confidence in intelligent application development.",
+        text: "Support build-vs-buy decisions, team growth, and architecture. Empowering your organization to lead with clarity and confidence in intelligent application development.",
       },
       {
-        heading: "Strengthen Your AI Foundation",
-        text: "AI success begins with a foundation tailored to your current state. Apex unifies cloud, data, and apps, while upskilling teams and embedding scalable governance. Enable enterprise technical readiness across development, testing, and production—aligning with your goals for scale, trust, and risk.",
+        text: "Strengthen Your AI Foundation. Success begins with a foundation tailored to your current state. Apex unifies cloud, data, and apps, while upskilling teams and embedding scalable governance. Enable enterprise technical readiness across development, testing, and production—aligning with your goals for scale, trust, and risk.",
       },
       {
-        heading: "Scale AI with Purpose-Built Tools",
-        text: "Apex offers customizable, prebuilt solution accelerators—from GenAI agents to simulation and optimization tools. We also help you design agents that go beyond automation, built for reasoning, and real business impact.",
+        text: "Scale AI with Purpose-Built Tools. Apex offers customizable, prebuilt solution accelerators—from GenAI agents to simulation and optimization tools. We also help you design agents that go beyond automation, built for reasoning, and real business impact.",
       },
       {
-        heading: "Partnering for Real AI Impact",
-        text: "Apex combines deep consulting expertise with end-to-end support to help you build scalable AI solutions, accelerate time-to-value, and optimize performance. Our approach integrates seamlessly across cloud, data, and application tools—ensuring your AI initiatives are aligned, efficient, and built to last.",
+        text: "Partnering for Real AI Impact. Apex combines deep consulting expertise with end-to-end support to help you build scalable AI solutions, accelerate time-to-value, and optimize performance. Our approach integrates seamlessly across cloud, data, and application tools—ensuring your AI initiatives are aligned, efficient, and built to last.",
       },
     ],
     services: [

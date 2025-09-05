@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 type MenuItem = {
   key: string;
@@ -16,12 +17,12 @@ const NavigationMenu: React.FC<Props> = ({ menu }) => (
     <ul>
       {menu.map((item) => (
         <li key={item.key} className={item.children ? "has-dropdown" : ""}>
-          <a href={item.href}>{item.label}</a>
+          <Link to={item.href}>{item.label}</Link>
           {item.children && (
             <ul className="dropdown">
               {item.children.map((child) => (
                 <li key={child.key}>
-                  <a href={child.href}>{child.label}</a>
+                  <Link to={child.href}>{child.label}</Link>
                 </li>
               ))}
             </ul>
