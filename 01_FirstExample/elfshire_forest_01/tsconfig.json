@@ -1,0 +1,11 @@
+{
+  // List of individual files to include (empty here, using project references instead)
+  "files": [],
+  // Project references allow splitting the project into smaller tsconfig files for different purposes
+  "references": [
+    // Reference to the main application TypeScript config
+    { "path": "./tsconfig.app.json" },
+    // Reference to the Node (e.g., Vite config) TypeScript config
+    { "path": "./tsconfig.node.json" }
+  ]
+}

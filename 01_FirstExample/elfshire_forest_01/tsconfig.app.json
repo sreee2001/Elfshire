@@ -1,0 +1,47 @@
+{
+  // TypeScript configuration for the main application source code
+  "compilerOptions": {
+    // Path to store incremental build info
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    // Set ECMAScript target version
+    "target": "ES2022",
+    // Use 'define' semantics for class fields (aligns with modern JS)
+    "useDefineForClassFields": true,
+    // Specify library files to include (ES2022, DOM APIs, and iterable DOM collections)
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    // Set module system
+    "module": "ESNext",
+    // Skip type checking of declaration files
+    "skipLibCheck": true,
+
+    /* Bundler mode options */
+    // Use bundler-style module resolution
+    "moduleResolution": "bundler",
+    // Allow importing TypeScript files with extensions
+    "allowImportingTsExtensions": true,
+    // Keep import/export syntax as written
+    "verbatimModuleSyntax": true,
+    // Force module detection for all files
+    "moduleDetection": "force",
+    // Do not emit output files (type-check only)
+    "noEmit": true,
+    // Use the new JSX transform for React (no need to import React in every file)
+    "jsx": "react-jsx",
+
+    /* Linting options */
+    // Enable all strict type-checking options
+    "strict": true,
+    // Report errors on unused local variables
+    "noUnusedLocals": true,
+    // Report errors on unused function parameters
+    "noUnusedParameters": true,
+    // Only allow erasable (safe to remove) syntax
+    "erasableSyntaxOnly": true,
+    // Disallow fallthrough cases in switch statements
+    "noFallthroughCasesInSwitch": true,
+    // Disallow imports with unchecked side effects
+    "noUncheckedSideEffectImports": true
+  },
+  // Include all files in the 'src' directory for type-checking
+  "include": ["src"]
+}

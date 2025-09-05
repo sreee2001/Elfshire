@@ -1,0 +1,27 @@
+.logo-sgsi a {
+  display: flex;
+  align-items: center;
+  /* Optional: add a border, background, or padding to the whole combo */
+}
+
+.logo-img {
+  width: auto;
+  display: block;
+  height: 40px;
+}
+
+.logo-text {
+  background: rgb(3, 60, 77);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 1rem;
+  border-radius: 0px;
+  line-height: 1.1;
+}
