@@ -4,6 +4,8 @@ import "./App.css";
 import NavigationMenu from "./navigation/NavigationMenu";
 import menuOptions from "./navigation/menu";
 
+import aiContent from "./data/artificialIntelligence/pageContent";
+
 function App() {
   return (
     <>
