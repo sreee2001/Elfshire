@@ -1,25 +1,11 @@
-import ListGroup from "./components/ListGroup";
+import Alert from "./Alert";
 
 function TownCenter() {
-  let fantasyItems = [
-    "Elven Sword",
-    "Dwarven Shield",
-    "Wizard's Staff",
-    "Dragon Scale",
-    "Phoenix Feather",
-  ];
-
-  const handleSelectItem = (item: string) => {
-    console.log(`Selected item: ${item}`);
-  };
-
   return (
     <div>
-      <ListGroup
-        items={fantasyItems}
-        heading="Fantasy Items"
-        onSelectItem={handleSelectItem}
-      />
+      <Alert>
+        Welcome to the <span className="font-weight-bold">Town Center!</span>
+      </Alert>
     </div>
   );
 }
