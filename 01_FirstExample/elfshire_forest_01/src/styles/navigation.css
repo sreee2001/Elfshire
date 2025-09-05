@@ -58,7 +58,7 @@
 }
 
 .main-menu .dropdown {
-  display: flex;                           /* Stack dropdown items vertically */
+  display: none;                           /* Stack dropdown items vertically */
   flex-direction: column;
   width: 400%;                      /* Ensures the dropdown is as wide as its widest child */
   min-width: 180px;                        /* Keeps your minimum width */
