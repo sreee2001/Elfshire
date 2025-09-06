@@ -8,7 +8,7 @@
   display: flex;                             /* Flex layout for horizontal alignment */
   align-items: center;                       /* Vertically center items */
   justify-content: space-between;            /* Space between logo and menu */
-  position: sticky;                          /* Stick to top on scroll */
+  position: fixed;                          /* Stick to top on scroll */
   top: 0;                                    /* Top of viewport */
   z-index: 100;                              /* Ensure navbar is above other content */
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 type MenuItem = {
@@ -12,25 +12,42 @@ type Props = {
   menu: MenuItem[];
 };
 
-const NavigationMenu: React.FC<Props> = ({ menu }) => (
-  <nav className="main-menu">
-    <ul>
-      {menu.map((item) => (
-        <li key={item.key} className={item.children ? "has-dropdown" : ""}>
-          <Link to={item.href}>{item.label}</Link>
-          {item.children && (
-            <ul className="dropdown">
-              {item.children.map((child) => (
-                <li key={child.key}>
-                  <Link to={child.href}>{child.label}</Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-      ))}
-    </ul>
-  </nav>
-);
+const NavigationMenu: React.FC<Props> = ({ menu }) => {
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  return (
+    <nav className="main-menu">
+      <ul>
+        {menu.map((item) => (
+          <li
+            key={item.key}
+            className={item.children ? "has-dropdown" : ""}
+            onMouseEnter={() => setOpenDropdown(item.key)}
+            onMouseLeave={() => setOpenDropdown(null)}
+          >
+            <Link to={item.href || "#"}>{item.label}</Link>
+            {item.children && (
+              <ul
+                className="dropdown"
+                style={{ display: openDropdown === item.key ? "flex" : "none" }}
+              >
+                {item.children.map((child) => (
+                  <li key={child.key}>
+                    <Link
+                      to={child.href || "#"}
+                      onClick={() => setOpenDropdown(null)} // Close dropdown on click
+                    >
+                      {child.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
 export default NavigationMenu;
