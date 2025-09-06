@@ -39,13 +39,13 @@ const pagesContent: Record<string, PageContent> = {
     leadership: [
       {
         name: "Srikanth Tangella",
-        title: "Global Head",
-        bio: "Before founding SPEC Global Solutions Inc., Srikanth Tangella worked as a Principal Technical Specialist at Microsoft, within the AI Global Black Belt team, Microsoft Research, and the Innovation Hub. His expertise includes the data, BI, machine learning, AI, IoT and autonomous systems domains. Srikanth has a background in customer-centric technical consulting, including over 10 years in AI strategy, envisioning, problem solving, technical architecture, builds and deployments.",
+        title: "Founder & AI Solution Leader",
+        bio: "Before founding SPEC Global Solutions Inc., Srikanth Tangella worked as a Principal Software Engineer and Vice President at Bank of New York Mellon, within the Information Security Team. His expertise includes the data, machine learning, cybersecurity. Srikanth has a background in customer-centric technical consulting, including over 10 years in AI strategy, envisioning, problem solving, technical architecture, builds and deployments.",
       },
       {
         name: "Pratyusha Yarlagadda",
-        title: "AI Solutions Leader",
-        bio: "Before joining Apex as AI Solution Leader, Pratyusha Yarlagadda held senior consulting roles at Softchoice, including as an AI Consultant within the Cloud AI Consulting team and a Digital Transformation Consultant in the Design Studio. Her expertise spans AI strategy, data modernization, cloud adoption, and digital innovation. Pratyusha has a background in customer-centric consulting and technical leadership, with over 20 years of experience in solution development, executive facilitation, and strategic sales.",
+        title: "Founder & CEO",
+        bio: "Before founding SPEC Global Solutions Inc., Pratyusha Yarlagadda was an ERP global leader, including extensive experience in ERP Cloud and Leading  multi-demography teams and as Digital Transformation Consultant. Pratyusha has a background in customer-centric consulting and technical leadership, with over 20 years of experience in solution development, executive facilitation, and strategic sales.",
       },
     ],
     stats: [

@@ -9,7 +9,6 @@ export default function App() {
       <h2 style={{ color: "#0056b3" }}>{aiContent.subtitle}</h2>
       {aiContent.sections.map((section, idx) => (
         <section key={idx} style={{ margin: "2rem 0" }}>
-          <h3 style={{ marginBottom: "0.5rem" }}>{section.heading}</h3>
           <p>{section.text}</p>
         </section>
       ))}
