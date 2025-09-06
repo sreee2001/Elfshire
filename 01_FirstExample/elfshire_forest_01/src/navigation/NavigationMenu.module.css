@@ -4,11 +4,12 @@
   border-bottom: 2px solid #e5e7eb;        /* Subtle bottom border */
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);  /* Soft shadow for depth */
   padding: 0 2rem;                           /* Horizontal padding */
+  width: 100vw;                              /* Full viewport width */
   height: 64px;                              /* Fixed navbar height */
   display: flex;                             /* Flex layout for horizontal alignment */
   align-items: center;                       /* Vertically center items */
-  justify-content: space-between;            /* Space between logo and menu */
-  position: fixed;                          /* Stick to top on scroll */
+  justify-content: center;                   /* Center content horizontally */
+  position: fixed;                           /* Stick to top on scroll */
   top: 0;                                    /* Top of viewport */
   z-index: 100;                              /* Ensure navbar is above other content */
 }
