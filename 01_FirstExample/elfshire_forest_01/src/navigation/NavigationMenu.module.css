@@ -86,22 +86,3 @@
   padding: 0.5rem 1.2rem;                    /* More horizontal padding for better coverage */
   white-space: nowrap;                       /* Prevents text from wrapping */
 }
-
-/* Non-clickable menu label (e.g., Services) */
-.menu-label {
-  color: #033c4d;
-  font-weight: 600;
-  font-size: 1.05rem;
-  padding: 0.5rem 0.8rem;
-  border-radius: 6px;
-  user-select: none;
-  cursor: default;
-  display: inline-block;
-  transition: background 0.2s, color 0.2s;
-}
-
-.menu-label:hover,
-.menu-label:focus {
-  background: #e5f0fa;
-  color: #0056b3;
-}

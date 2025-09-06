@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
+import Home from "./home/Home";
 import NavigationMenu from "./navigation/NavigationMenu";
 import menuOptions from "./navigation/menu";
 import ArtificialIntelligencePage from "./data/artificialIntelligence/ArtificialIntelligence";
@@ -31,6 +32,9 @@ function App() {
       </div>
       {/* Define Routes for Different Pages */}
       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<Home />} />
         {/* Route for the Artificial Intelligence page */}
         <Route
           path="services/artificialintelligence"

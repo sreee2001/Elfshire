@@ -25,7 +25,11 @@ const NavigationMenu: React.FC<Props> = ({ menu }) => {
             onMouseEnter={() => setOpenDropdown(item.key)}
             onMouseLeave={() => setOpenDropdown(null)}
           >
-            <Link to={item.href || "#"}>{item.label}</Link>
+            {item.href ? (
+              <Link to={item.href}>{item.label}</Link>
+            ) : (
+              <span className="menu-label">{item.label}</span>
+            )}
             {item.children && (
               <ul
                 className="dropdown"

@@ -11,7 +11,6 @@ const menuOptions: MenuItem[] = [
   {
     key: "services",
     label: "Services",
-    href: "/services/artificialintelligence",
     children: [
       {
         key: "artificialintelligence",
