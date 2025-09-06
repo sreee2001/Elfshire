@@ -1,5 +1,5 @@
 /* Navigation Bar Container */
-.nav-outer {
+.navOuter {
   background: #fff;                        /* White background for the navbar */
   border-bottom: 2px solid #e5e7eb;        /* Subtle bottom border */
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);  /* Soft shadow for depth */
@@ -14,7 +14,7 @@
 }
 
 /* Main Menu */
-.main-menu ul {
+.mainMenu ul {
   display: flex;                             /* Horizontal menu items */
   gap: 1.5rem;                               /* Space between menu items */
   list-style: none;                          /* Remove default bullets */
@@ -24,11 +24,11 @@
   height: 64px;                              /* Match navbar height */
 }
 
-.main-menu li {
+.mainMenu li {
   position: relative;                        /* For positioning dropdowns */
 }
 
-.main-menu a {
+.mainMenu a {
   color: #033c4d;                          /* Main menu link color */
   text-decoration: none;                     /* Remove underline */
   font-weight: 600;                          /* Semi-bold text */
@@ -38,26 +38,26 @@
   transition: background 0.2s, color 0.2s;   /* Smooth hover transitions */
 }
 
-.main-menu a:hover,
-.main-menu a:focus {
+.mainMenu a:hover,
+.mainMenu a:focus {
   background: #e5f0fa;                     /* Light blue background on hover/focus */
   color: #0056b3;                          /* Blue text on hover/focus */
 }
 
 /* Dropdown Styles */
-.main-menu .has-dropdown > a::after {
+.mainMenu .has-dropdown > a::after {
   content: '▼';                              /* Downward chevron for dropdowns */
   font-size: 0.7em;                          /* Small chevron */
   color: #0056b3;                          /* Chevron color */
   margin-left: 0.4em;                        /* Space between text and chevron */
 }
 
-.main-menu .has-dropdown:hover > .dropdown,
-.main-menu .has-dropdown:focus-within > .dropdown {
+.mainMenu .has-dropdown:hover > .dropdown,
+.mainMenu .has-dropdown:focus-within > .dropdown {
   display: block;
 }
 
-.main-menu .dropdown {
+.mainMenu .dropdown {
   display: none;                            /* Hide dropdown by default */
   flex-direction: column;                   /* Stack dropdown items vertically when shown */
   width: 400%;                              /* Adjust width as needed for your layout */
@@ -76,13 +76,32 @@
   z-index: 200;                             /* On top of other content */
 } 
 
-.main-menu .dropdown li {
+.mainMenu .dropdown li {
   width: 100%;
 }
 
-.main-menu .dropdown a {
+.mainMenu .dropdown a {
   display: block;
   width: 100%;
   padding: 0.5rem 1.2rem;                    /* More horizontal padding for better coverage */
   white-space: nowrap;                       /* Prevents text from wrapping */
+}
+
+/* Non-clickable menu label (e.g., Services) */
+.menuLabel {
+  color: #033c4d;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  user-select: none;
+  cursor: default;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menuLabel:hover,
+.menuLabel:focus {
+  background: #e5f0fa;
+  color: #0056b3;
 }

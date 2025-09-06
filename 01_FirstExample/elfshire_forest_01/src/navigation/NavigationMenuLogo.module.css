@@ -1,16 +1,16 @@
-.logo-sgsi a {
+.logoSgsi a {
   display: flex;           /* Place image and text side by side */
   align-items: center;     /* Vertically center image and text */
   /* Optional: add a border, background, or padding to the whole combo */
 }
 
-.logo-img {
+.logoImg {
   width: auto;             /* Maintain image aspect ratio */
   display: block;          /* Remove extra space below image */
   height: 40px;            /* Set image height */
 }
 
-.logo-text {
+.logoText {
   background: rgb(3, 60, 77);   /* Set background color for text badge */
   color: #fff;                  /* White text color */
   font-size: 1.1rem;            /* Text size */

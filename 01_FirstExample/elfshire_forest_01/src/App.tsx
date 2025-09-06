@@ -4,24 +4,24 @@ import Home from "./home/Home";
 import NavigationMenu from "./navigation/NavigationMenu";
 import menuOptions from "./navigation/menu";
 import ArtificialIntelligencePage from "./data/artificialIntelligence/ArtificialIntelligence";
-import "./styles/logo.css";
-import "./styles/navigation.css";
+import navstyles from "./navigation/NavigationMenu.module.css";
+import logostyles from "./navigation/NavigationMenuLogo.module.css";
 import "./App.css";
 
 function App() {
   return (
     <Router>
-      <div className="nav-outer">
+      <div className={navstyles.navOuter}>
         {/* Company Logo and Name */}
-        <div className="logo-sgsi">
+        <div className={logostyles.logoSgsi}>
           {/* <a href="https://specglobalsolutions.com/" target="_blank"> */}
           <Link to="/">
             <img
-              className="logo-img"
+              className={logostyles.logoImg}
               src="/logo/sgsi_circle_logo_blue.jpg"
               alt="SPEC Global Solutions Inc Logo"
             />
-            <span className="logo-text">
+            <span className={logostyles.logoText}>
               <span>SPEC Global</span>
               <span>Solutions Inc.</span>
             </span>

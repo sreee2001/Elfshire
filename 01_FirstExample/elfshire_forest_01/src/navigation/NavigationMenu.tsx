@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import navStyles from "./NavigationMenu.module.css";
 
 type MenuItem = {
   key: string;
@@ -16,23 +17,23 @@ const NavigationMenu: React.FC<Props> = ({ menu }) => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
-    <nav className="main-menu">
+    <nav className={navStyles.mainMenu}>
       <ul>
         {menu.map((item) => (
           <li
             key={item.key}
-            className={item.children ? "has-dropdown" : ""}
+            className={item.children ? navStyles.hasDropdown : ""}
             onMouseEnter={() => setOpenDropdown(item.key)}
             onMouseLeave={() => setOpenDropdown(null)}
           >
             {item.href ? (
               <Link to={item.href}>{item.label}</Link>
             ) : (
-              <span className="menu-label">{item.label}</span>
+              <span className={navStyles.menuLabel}>{item.label}</span>
             )}
             {item.children && (
               <ul
-                className="dropdown"
+                className={navStyles.dropdown}
                 style={{ display: openDropdown === item.key ? "flex" : "none" }}
               >
                 {item.children.map((child) => (
