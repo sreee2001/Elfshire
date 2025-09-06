@@ -1,64 +1,46 @@
 import pagesContent from "./pageContent";
+import styles from "./ArtificialIntelligencePage.module.css";
 
 const aiContent = pagesContent["artificialIntelligence"];
 
-export default function App() {
+export default function ArtificialIntelligencePage() {
   return (
-    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
+    <div className={styles.container}>
       <h1>{aiContent.title}</h1>
-      <h2 style={{ color: "#0056b3" }}>{aiContent.subtitle}</h2>
+      <h2 className={styles.subtitle}>{aiContent.subtitle}</h2>
       {aiContent.sections.map((section, idx) => (
-        <section key={idx} style={{ margin: "2rem 0" }}>
+        <section key={idx} className={styles.section}>
           <p>{section.text}</p>
         </section>
       ))}
       <h3>Our Services</h3>
-      <ul
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "1rem",
-          listStyle: "none",
-          padding: 0,
-        }}
-      >
+      <ul className={styles.servicesList}>
         {aiContent.services.map((service) => (
-          <li
-            key={service}
-            style={{
-              background: "#e5f0fa",
-              padding: "0.5rem 1rem",
-              borderRadius: "6px",
-            }}
-          >
+          <li key={service} className={styles.serviceItem}>
             {service}
           </li>
         ))}
       </ul>
       <h3>Partnering for Real AI Impact</h3>
       <p>
-        Apex combines deep consulting expertise with end-to-end support to help
-        you build scalable AI solutions, accelerate time-to-value, and optimize
-        performance.
+        SPEC Global Solutions Inc. combines deep consulting expertise with
+        end-to-end support to help you build scalable AI solutions, accelerate
+        time-to-value, and optimize performance.
       </p>
       <h3>Our Experience</h3>
-      <ul
-        style={{ display: "flex", gap: "2rem", listStyle: "none", padding: 0 }}
-      >
+      <ul className={styles.statsList}>
         {aiContent.stats.map((stat) => (
           <li key={stat.label}>
-            <div style={{ fontSize: "2rem", fontWeight: "bold" }}>
-              {stat.value}
-            </div>
+            <div className={styles.statValue}>{stat.value}</div>
             <div>{stat.label}</div>
           </li>
         ))}
       </ul>
       <h3>Leadership</h3>
       {aiContent.leadership.map((leader) => (
-        <div key={leader.name} style={{ marginBottom: "1.5rem" }}>
+        <div key={leader.name} className={styles.leader}>
           <strong>{leader.name}</strong> - {leader.title}
-          <p style={{ margin: "0.5rem 0 0 0" }}>{leader.bio}</p>
+          <p className={styles.leaderBio}>{leader.bio}</p>
         </div>
       ))}
     </div>
