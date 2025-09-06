@@ -1,8 +1,7 @@
-// src/data/pagesContent.ts
 export type PageContent = {
   title: string;
-  subtitle: string;
-  sections: { text: string }[];
+
+  sections: { text: string, header: string }[];
   services: string[];
   leadership: { name: string; title: string; bio: string }[];
   stats: { label: string; value: string }[];
@@ -11,19 +10,22 @@ export type PageContent = {
 const pagesContent: Record<string, PageContent> = {
   artificialIntelligence: {
     title: "AI That Meets You Where You Are",
-    subtitle: "AI That Works for You",
     sections: [
       {
-        text: "Support build-vs-buy decisions, team growth, and architecture. Empowering your organization to lead with clarity and confidence in intelligent application development.",
+        header: "AI That Works for You ",
+        text: "Support build-vs-buy decisions, team growth, and architecture through focused advisory, training, and enterprise AI readiness—empowering your organization to lead with clarity and confidence in intelligent application development. ",
       },
       {
-        text: "Strengthen Your AI Foundation. Success begins with a foundation tailored to your current state. We unify cloud, data, and apps, while upskilling teams and embedding scalable governance. Enable enterprise technical readiness across development, testing, and production—aligning with your goals for scale, trust, and risk.",
+        header: "Strengthen Your AI Foundation",
+        text: "AI success begins with a foundation tailored to your current state. Apex unifies cloud, data, and apps, while upskilling teams and embedding scalable governance. Enable enterprise technical readiness across development, testing, and production—aligning with your goals for scale, trust, and risk.",
       },
       {
-        text: "Scale AI with Purpose-Built Tools. We offer customizable, prebuilt solution accelerators—from GenAI agents to simulation and optimization tools. We also help you design agents that go beyond automation, built for reasoning, and real business impact.",
+        header: "Scale AI with Purpose-Built Tools",
+        text: "Ready to move faster? We offer customizable, prebuilt solution accelerators—from GenAI agents to simulation and optimization tools. We also help you design agents that go beyond automation, built for reasoning, and real business impact. ",
       },
       {
-        text: "Partnering for Real AI Impact. We combine deep consulting expertise with end-to-end support to help you build scalable AI solutions, accelerate time-to-value, and optimize performance. Our approach integrates seamlessly across cloud, data, and application tools—ensuring your AI initiatives are aligned, efficient, and built to last.",
+        header: "Partnering for Real AI Impact",
+        text: "We combine deep consulting expertise with end-to-end support to help you build scalable AI solutions, accelerate time-to-value, and optimize performance. Our approach integrates seamlessly across cloud, data, and application tools—ensuring your AI initiatives are aligned, efficient, and built to last.",
       },
     ],
     services: [
