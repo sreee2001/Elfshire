@@ -13,8 +13,12 @@ export default function ArtificialIntelligencePage() {
         <div className={sectionStyles.gridSections}>
           {aiContent.sections.slice(0, 4).map((section) => (
             <div key={section.header} className={sectionStyles.gridSectionItem}>
-              <div className={sectionStyles.gridSectionHeader}>{section.header}</div>
-              <div className={sectionStyles.gridSectionContent}>{section.text}</div>
+              <div className={sectionStyles.gridSectionHeader}>
+                {section.header}
+              </div>
+              <div className={sectionStyles.gridSectionContent}>
+                {section.text}
+              </div>
             </div>
           ))}
         </div>
