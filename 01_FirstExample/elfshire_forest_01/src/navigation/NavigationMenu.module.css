@@ -1,115 +1,114 @@
 /* Navigation Bar Container */
 .navOuter {
-  background: #fff;                        /* White background for the navbar */
-  border-bottom: 2px solid #e5e7eb;        /* Subtle bottom border */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);  /* Soft shadow for depth */
-  padding: 0 2rem;                           /* Horizontal padding */
-  width: 80vw;                              /* Full viewport width */
-  height: 64px;                              /* Fixed navbar height */
-  display: flex;                             /* Flex layout for horizontal alignment */
-  align-items: center;                       /* Vertically center items */
-  justify-content: center;            /* Puts max space between logo and menu */
-  position: fixed;                           /* Stick to top on scroll */
-  top: 0;                                    /* Top of viewport */
-  z-index: 10;                              /* Ensure navbar is above other content */
+  background: #fff;                         /* White background for the navbar           */
+  border-bottom: 2px solid #e5e7eb;         /* Subtle bottom border                      */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);   /* Soft shadow for depth                     */
+  padding: 0 2rem;                            /* Horizontal padding                        */
+  width: 80vw;                                /* 80% of viewport width (not 100vw)         */
+  height: 64px;                               /* Fixed navbar height                       */
+  display: flex;                              /* Flex layout for horizontal alignment      */
+  align-items: center;                        /* Vertically center items                   */
+  justify-content: center;                    /* Center logo and menu horizontally         */
+  position: fixed;                            /* Stick to top on scroll                    */
+  top: 0;                                     /* Top of viewport                           */
+  z-index: 10;                                /* Ensure navbar is above other content      */
 }
 
 /* Main Menu */
 .mainMenu ul {
-  display: flex;                             /* Horizontal menu items */
-  gap: 1.5rem;                               /* Space between menu items */
-  list-style: none;                          /* Remove default bullets */
-  margin: 0;                                 /* Remove default margin */
-  padding: 0;                                /* Remove default padding */
-  align-items: center;                       /* Vertically center menu items */
-  height: 64px;                              /* Match navbar height */
+  display: flex;                              /* Horizontal layout for menu items          */
+  gap: 1.5rem;                                /* Space between menu items                  */
+  list-style: none;                           /* Remove default bullets                    */
+  margin: 0;                                  /* Remove default margin                     */
+  padding: 0;                                 /* Remove default padding                    */
+  align-items: center;                        /* Vertically center menu items              */
+  height: 64px;                               /* Match navbar height                       */
 }
 
 .mainMenu li {
-  position: relative;                        /* For positioning dropdowns */
+  position: relative;                         /* Needed for absolutely positioned dropdowns */
 }
 
 .mainMenu a {
-  color: #033c4d;                          /* Main menu link color */
-  text-decoration: none;                     /* Remove underline */
-  font-weight: 600;                          /* Semi-bold text */
-  font-size: 1.05rem;                        /* Slightly larger font */
-  padding: 0.5rem 0.8rem;                    /* Padding for clickable area */
-  border-radius: 6px;                        /* Rounded corners */
-  transition: background 0.2s, color 0.2s;   /* Smooth hover transitions */
+  color: #033c4d;                           /* Main menu link color                      */
+  text-decoration: none;                      /* Remove underline                          */
+  font-weight: 600;                           /* Semi-bold text                            */
+  font-size: 1.05rem;                         /* Slightly larger font                      */
+  padding: 0.5rem 0.8rem;                     /* Padding for clickable area                */
+  border-radius: 6px;                         /* Rounded corners                           */
+  transition: background 0.2s, color 0.2s;    /* Smooth hover transitions                   */
 }
 
 .mainMenu a:hover,
 .mainMenu a:focus {
-  background: #e5f0fa;                     /* Light blue background on hover/focus */
-  color: #0056b3;                          /* Blue text on hover/focus */
+  background: #e5f0fa;                      /* Light blue background on hover/focus      */
+  color: #0056b3;                           /* Blue text on hover/focus                  */
 }
 
 /* Dropdown Styles */
 .mainMenu .has-dropdown > a::after {
-  content: '▼';                              /* Downward chevron for dropdowns */
-  font-size: 0.7em;                          /* Small chevron */
-  color: #0056b3;                          /* Chevron color */
-  margin-left: 0.4em;                        /* Space between text and chevron */
+  content: '▼';                               /* Downward chevron for dropdowns            */
+  font-size: 0.7em;                           /* Small chevron                             */
+  color: #0056b3;                           /* Chevron color                             */
+  margin-left: 0.4em;                         /* Space between text and chevron            */
 }
 
 .mainMenu .has-dropdown:hover > .dropdown,
 .mainMenu .has-dropdown:focus-within > .dropdown {
-  display: block;
+  display: block;                             /* Show dropdown on hover/focus              */
 }
 
 .mainMenu .dropdown {
-  display: none;                            /* Hide dropdown by default */
-  flex-direction: column;                   /* Stack dropdown items vertically when shown */
-  width: 400%;                              /* Adjust width as needed for your layout */
-  min-width: 180px;                         /* Minimum width for dropdown */
-  min-height: 250px;                        /* Minimum height for dropdown */
-  overflow-y: hidden;                       /* Hide vertical overflow (change to auto for scroll) */
-  overflow-x: hidden;                       /* Hide horizontal overflow */
-  position: absolute;                       /* Position relative to parent */
-  left: 0;                                  /* Align left edge */
-  top: 110%;                                /* Place below parent */
-  background: #fff;                        /* White background */
-  border: 2px solid #d1d5db;               /* Border for dropdown */
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10); /* Subtle shadow */
-  border-radius: 12px;                      /* Rounded corners */
-  padding: 0.5rem 0;                        /* Vertical padding */
-  z-index: 200;                             /* On top of other content */
-} 
+  display: none;                              /* Hide dropdown by default                  */
+  flex-direction: column;                     /* Stack dropdown items vertically when shown */
+  width: 400%;                                /* Adjust width as needed for your layout    */
+  min-width: 180px;                           /* Minimum width for dropdown                */
+  min-height: 250px;                          /* Minimum height for dropdown               */
+  overflow-y: hidden;                         /* Hide vertical overflow (change to auto)   */
+  overflow-x: hidden;                         /* Hide horizontal overflow                  */
+  position: absolute;                         /* Position relative to parent               */
+  left: 0;                                    /* Align left edge                           */
+  top: 110%;                                  /* Place below parent                        */
+  background: #fff;                         /* White background                          */
+  border: 2px solid #d1d5db;                /* Border for dropdown                       */
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);  /* Subtle shadow                             */
+  border-radius: 12px;                        /* Rounded corners                           */
+  padding: 0.5rem 0;                          /* Vertical padding                          */
+  z-index: 200;                               /* On top of other content                   */
+}
 
 .mainMenu .dropdown li {
-  width: 100%;
+  width: 100%;                            /* Dropdown items take full width            */
 }
 
 .mainMenu .dropdown a {
-  display: block;
-  width: 100%;
-  padding: 0.5rem 1.2rem;                    /* More horizontal padding for better coverage */
-  white-space: nowrap;                       /* Prevents text from wrapping */
+  display: block;                         /* Block for full clickable area             */
+  width: 100%;                            /* Full width                                */
+  padding: 0.5rem 1.2rem;                 /* More horizontal padding                   */
+  white-space: nowrap;                    /* Prevents text from wrapping               */
 }
 
 /* Non-clickable menu label (e.g., Services) */
 .menuLabel {
-  color: #033c4d;
-  font-weight: 600;
-  font-size: 1.05rem;
-  padding: 0.5rem 0.8rem;
-  border-radius: 6px;
-  user-select: none;
-  cursor: default;
-  display: inline-block;
-  transition: background 0.2s, color 0.2s;
+  color: #033c4d;                       /* Label color                               */
+  font-weight: 600;                       /* Bold label                                */
+  font-size: 1.05rem;                     /* Font size                                 */
+  padding: 0.5rem 0.8rem;                 /* Padding                                   */
+  border-radius: 6px;                     /* Rounded corners                           */
+  user-select: none;                      /* Prevent text selection                    */
+  cursor: default;                        /* Default cursor                            */
+  display: inline-block;                  /* Inline block for spacing                  */
+  transition: background 0.2s, color 0.2s;/* Smooth hover/focus transitions            */
 }
 
 .menuLabel:hover,
 .menuLabel:focus {
-  background: #e5f0fa;
-  color: #0056b3;
+  background: #e5f0fa;                  /* Hover/focus background                    */
+  color: #0056b3;                       /* Hover/focus color                         */
 }
 
 .menuContainer {
-  /* Optional: styles for your menu */
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  display: flex;                          /* Flex container for horizontal layout      */
+  align-items: center;                    /* Vertically center menu items              */
+  gap: 1rem;                              /* Space between menu items                  */
 }
