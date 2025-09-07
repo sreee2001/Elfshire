@@ -1,0 +1,15 @@
+### Get all financial data
+GET https://localhost:7296/api/FinancialData
+Accept: application/json
+
+###
+
+### (Optional) Get all financial data using HTTP (if HTTPS fails)
+GET http://localhost:5273/api/FinancialData
+Accept: application/json
+
+###
+
+### (Optional) Weather forecast sample endpoint
+GET https://localhost:7296/weatherforecast
+Accept: application/json

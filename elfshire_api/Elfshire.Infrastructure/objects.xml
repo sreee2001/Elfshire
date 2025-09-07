@@ -1,0 +1,4 @@
+<objects xmlns="http://www.springframework.net">
+  <object id="financialService" type="Elfshire.Infrastructure.Services.FinancialService, Elfshire.Infrastructure" />
+  <!-- Add more beans and AOP config as needed -->
+</objects>
