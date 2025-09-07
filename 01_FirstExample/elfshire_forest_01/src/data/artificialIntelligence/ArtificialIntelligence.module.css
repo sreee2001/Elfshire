@@ -1,58 +1,58 @@
 
+
 .container {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
+  min-height: 100vh;                        /* Full viewport height                   */
+  width: 100vw;                             /* Full viewport width                    */
+  display: flex;                            /* Flex for centering                     */
+  justify-content: center;                  /* Center horizontally                    */
+  align-items: center;                      /* Center vertically                      */
+  background: #fff;                         /* White background                       */
 }
 
 .content {
-  max-width: 1100px;
-  width: 100%;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: sans-serif;
+  max-width: 1100px;                        /* Max content width                      */
+  width: 100%;                              /* Full width up to max                   */
+  padding: 2rem 1rem;                       /* Padding around content                 */
+  display: flex;                            /* Flex for vertical stacking             */
+  flex-direction: column;                   /* Stack children vertically              */
+  align-items: center;                      /* Center children horizontally           */
+  font-family: sans-serif;                  /* Use sans-serif font                    */
 }
 
 .subtitle {
-  color: #0056b3;
+  color: #0056b3;                           /* Subtitle color                         */
 }
 
-
 .servicesList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
+  display: flex;                            /* Flex for horizontal list               */
+  flex-wrap: wrap;                          /* Allow wrapping                         */
+  gap: 1rem;                                /* Gap between items                      */
+  list-style: none;                         /* Remove default bullets                 */
+  padding: 0;                               /* Remove default padding                 */
 }
 
 .serviceItem {
-  background: #e5f0fa;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
+  background: #e5f0fa;                      /* Service item background                */
+  padding: 0.5rem 1rem;                     /* Service item padding                   */
+  border-radius: 6px;                       /* Rounded corners                        */
 }
 
 .statsList {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  padding: 0;
+  display: flex;                            /* Flex for horizontal stats              */
+  gap: 2rem;                                /* Gap between stats                      */
+  list-style: none;                         /* Remove default bullets                 */
+  padding: 0;                               /* Remove default padding                 */
 }
 
 .statValue {
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 2rem;                          /* Stat value font size                   */
+  font-weight: bold;                        /* Bold stat value                        */
 }
 
 .leader {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;                    /* Space below leader section             */
 }
 
 .leaderBio {
-  margin: 0.5rem 0 0 0;
+  margin: 0.5rem 0 0 0;                     /* Margin above leader bio                */
 }
