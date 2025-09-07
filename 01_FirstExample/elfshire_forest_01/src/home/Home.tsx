@@ -1,4 +1,5 @@
 import styles from "./Home.module.css";
+import sectionStyles from "../styles/CommonSections.module.css";
 
 export default function HomePage() {
   return (
@@ -13,34 +14,34 @@ export default function HomePage() {
           solutions. Our commitment is to deliver excellence, agility, and
           measurable results for every client.
         </p>
-        <div className={styles.sections}>
-          <div className={styles.section}>
-            <div className={styles.sectionTitle}>
+        <div className={sectionStyles.sections}>
+          <div className={sectionStyles.section}>
+            <div className={sectionStyles.sectionTitle}>
               IT Consulting & Digital Transformation
             </div>
-            <div className={styles.sectionText}>
+            <div className={sectionStyles.sectionText}>
               Unlock your business potential with our expert IT consulting,
               cloud migration, and digital transformation services. We help you
               modernize operations, enhance security, and drive innovation for a
               competitive edge.
             </div>
           </div>
-          <div className={styles.section}>
-            <div className={styles.sectionTitle}>
+          <div className={sectionStyles.section}>
+            <div className={sectionStyles.sectionTitle}>
               Staffing & Talent Solutions
             </div>
-            <div className={styles.sectionText}>
+            <div className={sectionStyles.sectionText}>
               Access top-tier technology talent through our flexible staffing
               solutions. Whether you need contract, contract-to-hire, or
               permanent placements, we deliver skilled professionals who fit
               your culture and goals.
             </div>
           </div>
-          <div className={styles.section}>
-            <div className={styles.sectionTitle}>
+          <div className={sectionStyles.section}>
+            <div className={sectionStyles.sectionTitle}>
               Custom Software Development
             </div>
-            <div className={styles.sectionText}>
+            <div className={sectionStyles.sectionText}>
               From web and mobile apps to enterprise platforms, our development
               teams build secure, scalable, and user-friendly solutions tailored
               to your unique business needs.

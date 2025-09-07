@@ -1,5 +1,6 @@
 import pagesContent from "./ArtificialIntelligence.content";
 import styles from "./ArtificialIntelligence.module.css";
+import sectionStyles from "../../styles/CommonSections.module.css";
 
 const aiContent = pagesContent["artificialIntelligence"];
 
@@ -9,9 +10,9 @@ export default function ArtificialIntelligencePage() {
       <div className={styles.content}>
         <h1>{aiContent.title}</h1>
         {aiContent.sections.map((section, idx) => (
-          <section key={idx} className={styles.section}>
-            <h4>{section.header}</h4>
-            <p>{section.text}</p>
+          <section key={idx} className={sectionStyles.section}>
+            <div className={sectionStyles.sectionTitle}>{section.header}</div>
+            <div className={sectionStyles.sectionText}>{section.text}</div>
           </section>
         ))}
         <h3>Our Services</h3>
