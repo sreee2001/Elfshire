@@ -13,22 +13,26 @@ function App() {
     <Router>
       <div className={navstyles.navOuter}>
         {/* Company Logo and Name */}
-        <div className={logostyles.logoSgsi}>
-          {/* <a href="https://specglobalsolutions.com/" target="_blank"> */}
-          <Link to="/">
-            <img
-              className={logostyles.logoImg}
-              src="/logo/sgsi_circle_logo_blue.jpg"
-              alt="SPEC Global Solutions Inc Logo"
-            />
-            <span className={logostyles.logoText}>
-              <span>SPEC Global</span>
-              <span>Solutions Inc.</span>
-            </span>
-          </Link>
+        <div className={logostyles.logoContainer}>
+          <div className={logostyles.logoSgsi}>
+            {/* <a href="https://specglobalsolutions.com/" target="_blank"> */}
+            <Link to="/">
+              <img
+                className={logostyles.logoImg}
+                src="/logo/sgsi_circle_logo_blue.jpg"
+                alt="SPEC Global Solutions Inc Logo"
+              />
+              <span className={logostyles.logoText}>
+                <span>SPEC Global</span>
+                <span>Solutions Inc.</span>
+              </span>
+            </Link>
+          </div>
         </div>
         {/* Navigation Menu */}
-        <NavigationMenu menu={menuOptions} />
+        <div className={navstyles.menuContainer}>
+          <NavigationMenu menu={menuOptions} />
+        </div>
       </div>
       {/* Define Routes for Different Pages */}
       <Routes>
