@@ -61,9 +61,9 @@
 .mainMenu .dropdown {
   display: none;                              /* Hide dropdown by default                  */
   flex-direction: column;                     /* Stack dropdown items vertically when shown */
-  width: 400%;                                /* Adjust width as needed for your layout    */
-  min-width: 180px;                           /* Minimum width for dropdown                */
-  min-height: 250px;                          /* Minimum height for dropdown               */
+  width: 500%;                                /* Adjust width as needed for your layout    */
+  min-width: 230px;                           /* Minimum width for dropdown                */
+  min-height: 380px;                          /* Minimum height for dropdown               */
   overflow-y: hidden;                         /* Hide vertical overflow (change to auto)   */
   overflow-x: hidden;                         /* Hide horizontal overflow                  */
   position: absolute;                         /* Position relative to parent               */
