@@ -65,6 +65,7 @@
   transition: box-shadow 0.2s;              /* Smooth shadow transition               */
   margin: 0 auto;                           /* Center in grid/flex                    */
 }
+
 .section:hover {
   box-shadow: 0 4px 18px rgba(60,60,60,0.13);/* Stronger shadow on hover               */
 }
@@ -80,4 +81,23 @@
   font-size: 1rem;                          /* Section text font size                 */
   color: #444;                              /* Section text color                     */
   line-height: 1.6;                         /* Line height for readability            */
+}
+
+.pageContent {
+  margin-top: 80px;                        /* Adjust 80px to match your menu height + desired gap */
+}
+
+.heading {
+  font-size: 2.2rem;                        /* Main heading font size                 */
+  font-weight: 700;                         /* Bold heading                           */
+  color: #1a237e;                           /* Heading color                          */
+  margin-bottom: 1.2rem;                    /* Space below heading                    */
+  text-align: center;                       /* Center heading text                    */
+}
+
+.intro {
+  font-size: 1.15rem;                       /* Intro text font size                   */
+  color: #333;                              /* Intro text color                       */
+  margin-bottom: 2rem;                      /* Space below intro                      */
+  text-align: center;                       /* Center intro text                      */
 }

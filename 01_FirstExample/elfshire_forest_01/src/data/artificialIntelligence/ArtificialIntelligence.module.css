@@ -1,24 +1,4 @@
 
-
-.container {
-  min-height: 100vh;                        /* Full viewport height                   */
-  width: 100vw;                             /* Full viewport width                    */
-  display: flex;                            /* Flex for centering                     */
-  justify-content: center;                  /* Center horizontally                    */
-  align-items: center;                      /* Center vertically                      */
-  background: #fff;                         /* White background                       */
-}
-
-.content {
-  max-width: 1100px;                        /* Max content width                      */
-  width: 100%;                              /* Full width up to max                   */
-  padding: 2rem 1rem;                       /* Padding around content                 */
-  display: flex;                            /* Flex for vertical stacking             */
-  flex-direction: column;                   /* Stack children vertically              */
-  align-items: center;                      /* Center children horizontally           */
-  font-family: sans-serif;                  /* Use sans-serif font                    */
-}
-
 .subtitle {
   color: #0056b3;                           /* Subtitle color                         */
 }
