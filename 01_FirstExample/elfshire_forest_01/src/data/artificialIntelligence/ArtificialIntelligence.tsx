@@ -9,8 +9,18 @@ export default function ArtificialIntelligencePage() {
     <div className={styles.container}>
       <div className={styles.content}>
         <h1>{aiContent.title}</h1>
-        {aiContent.sections.map((section, idx) => (
-          <section key={idx} className={sectionStyles.section}>
+        {/* 2x2 grid for first four sections */}
+        <div className={sectionStyles.gridSections}>
+          {aiContent.sections.slice(0, 4).map((section) => (
+            <div key={section.header} className={sectionStyles.gridSectionItem}>
+              <div className={sectionStyles.gridSectionHeader}>{section.header}</div>
+              <div className={sectionStyles.gridSectionContent}>{section.text}</div>
+            </div>
+          ))}
+        </div>
+        {/* Render any remaining sections as before */}
+        {aiContent.sections.slice(4).map((section) => (
+          <section key={section.header} className={sectionStyles.section}>
             <div className={sectionStyles.sectionTitle}>{section.header}</div>
             <div className={sectionStyles.sectionText}>{section.text}</div>
           </section>
