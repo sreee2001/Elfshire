@@ -1,10 +1,19 @@
 .container {
-  padding: 2rem;
-  max-width: 900px;
-  margin: 0 auto;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.content {
+  max-width: 1100px;
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .heading {
@@ -27,6 +36,9 @@
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .section {
@@ -37,8 +49,9 @@
   border-radius: 8px;
   padding: 1.5rem 1.2rem;
   box-shadow: 0 1px 6px rgba(60,60,60,0.06);
-  text-align: left;
+  text-align: center;
   transition: box-shadow 0.2s;
+  margin: 0 auto;
 }
 .section:hover {
   box-shadow: 0 4px 18px rgba(60,60,60,0.13);
