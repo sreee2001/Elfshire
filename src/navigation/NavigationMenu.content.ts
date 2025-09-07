@@ -46,6 +46,7 @@ const NavigationMenuOptions: MenuItem[] = [
       // Add more children as needed
     ],
   },
+  { key: "demo", label: "Demo", href: "/demo", },
   // Add more top-level menu items as needed
 ];
 export default NavigationMenuOptions;
