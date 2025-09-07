@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Home from "./home/Home";
 import NavigationMenu from "./navigation/NavigationMenu";
-import menuOptions from "./navigation/menu";
+import NavigationMenuOptions from "./navigation/NavigationMenu.content";
 import ArtificialIntelligencePage from "./data/artificialIntelligence/ArtificialIntelligence";
 import navstyles from "./navigation/NavigationMenu.module.css";
 import logostyles from "./navigation/NavigationMenuLogo.module.css";
@@ -31,7 +31,7 @@ function App() {
         </div>
         {/* Navigation Menu */}
         <div className={navstyles.menuContainer}>
-          <NavigationMenu menu={menuOptions} />
+          <NavigationMenu menu={NavigationMenuOptions} />
         </div>
       </div>
       {/* Define Routes for Different Pages */}

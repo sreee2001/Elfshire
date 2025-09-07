@@ -5,12 +5,13 @@ type MenuItem = {
   children?: MenuItem[];
 };
 
-const menuOptions: MenuItem[] = [
+const NavigationMenuOptions: MenuItem[] = [
   { key: "home", label: "Home", href: "/home" },
   { key: "aboutus", label: "About Us", href: "/about" },
   {
     key: "services",
     label: "Services",
+    href: "/services/artificialintelligence",
     children: [
       {
         key: "artificialintelligence",
@@ -47,14 +48,14 @@ const menuOptions: MenuItem[] = [
   },
   // Add more top-level menu items as needed
 ];
-export default menuOptions;
+export default NavigationMenuOptions;
 // Usage example (in a React component):
 /*
-import menuOptions from './path/to/menu';
+import NavigationMenuOptions from './path/to/menu';
 ...
 <nav>
   <ul>
-    {menuOptions.map(item => (
+    {NavigationMenuOptions.map(item => (
       <li key={item.key}>
         <a href={item.href}>{item.label}</a>
         {item.children && (
