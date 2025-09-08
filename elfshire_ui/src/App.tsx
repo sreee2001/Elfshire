@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Home from "./data/home/Home";
 import AboutUs from "./data/aboutus/AboutUs";
@@ -21,7 +21,7 @@ function App() {
             <Link to="/">
               <img
                 className={logostyles.logoImg}
-                src="/Elfshire/elfshire_ui/logo/sgsi_circle_logo_blue.jpg"
+                src="/Elfshire/logo/sgsi_circle_logo_blue.jpg"
                 alt="SPEC Global Solutions Inc Logo"
               />
               <span className={logostyles.logoText}>
