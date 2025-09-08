@@ -7,7 +7,7 @@ import react from '@vitejs/plugin-react'
 // Export the Vite configuration
 // For more options, see: https://vite.dev/config/
 export default defineConfig({
-  base: '/Elfshire/',
+  base: '/Elfshire/elfshire_ui',
   // Register plugins here. The React plugin enables React Fast Refresh and other React-specific features.
   plugins: [react()],
 
