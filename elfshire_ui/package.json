@@ -1,15 +1,19 @@
 {
-  "name": "elfshire_forest_01",
+  "name": "elfshire",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://sreee2001.github.io/elfshire/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.30.1"
