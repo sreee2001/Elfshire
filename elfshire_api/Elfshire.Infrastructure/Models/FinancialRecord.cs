@@ -1,8 +1,9 @@
+using Elfshire.Infrastructure.Database;
+
 namespace Elfshire.Infrastructure.Models
 {
-    public class FinancialRecord
+    public class FinancialRecord : Entity
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public decimal Value { get; set; }
     }
