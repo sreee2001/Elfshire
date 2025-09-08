@@ -21,7 +21,7 @@ function App() {
             <Link to="/">
               <img
                 className={logostyles.logoImg}
-                src="/logo/sgsi_circle_logo_blue.jpg"
+                src="/Elfshire/elfshire_ui/logo/sgsi_circle_logo_blue.jpg"
                 alt="SPEC Global Solutions Inc Logo"
               />
               <span className={logostyles.logoText}>
