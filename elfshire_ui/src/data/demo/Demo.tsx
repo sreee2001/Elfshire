@@ -33,14 +33,14 @@ export default function HomePage() {
         </ul>
       </nav>
       {/* Main Content Section */}
-      <div className={commonStyles.content} style={{ flex: 1 }}>
+      <div className={commonStyles.democontent} style={{ flex: 1 }}>
         <p className={commonStyles.intro}>
           I will be using this page to show various features of TypeScript and
           React.
         </p>
-        <div className={commonStyles.sections}>
+        <div className={commonStyles.demosections}>
           {/* Input Section */}
-          <div className={commonStyles.section} id="input-data">
+          <div className={commonStyles.demosection} id="input-data">
             <div className={commonStyles.sectionTitle}>Input Data</div>
             {
               <div className={commonStyles.sectionText}>
