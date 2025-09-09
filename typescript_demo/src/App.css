@@ -1,7 +1,5 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100vw;
   text-align: center;
 }
 
@@ -52,6 +50,28 @@
   text-align: center;
   background: white;
   z-index: 1000;
-  padding: 1em 0;
+  padding: 1em 0; /* vertical space for the header */
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.mainContent {
+  display: flex;
+  height: calc(100vh - 3.5em);
+  padding-top: 10em; /* Adjust to match header's vertical space (1em top + 1em bottom + font size) */
+  justify-content: center ;
+}
+
+.inputContent {
+  flex: 1;
+  padding: 1em;
+  border-right: 1px solid #eee;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.chartContent {
+  flex: 1;
+  padding: 1em;
+  overflow-y: auto;
+  overflow-x: auto;
 }
