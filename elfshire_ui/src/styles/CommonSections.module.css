@@ -41,34 +41,45 @@
   display: flex;                            /* Flex for vertical stacking             */
   flex-direction: column;                   /* Stack children vertically              */
   align-items: center;                      /* Center children horizontally           */
+  margin-top: 60px;                         /* Space below fixed header               */
 }
 
+.contentNavigation {
+  display: flex;                            /* Flex for vertical stacking             */
+  min-height: 100vh;                        /* Full viewport height                   */
+  min-width: 220px;                        /* Max content width                      */
+  max-width: 450px;                        /* Max content width                      */
+  margin: 0;                                 /* No margin                              */ 
+  padding: 2em 1em;                          /* Padding around content                 */
+  flex-direction: column;                   /* Stack children vertically              */
+  width: 600px;                             
+  padding-top: 100px;                       /* Padding around content                 */
+  flex-direction: column;                   /* Stack children vertically              */
+  align-items: left;                        /* Align children to the left             */
+  border-right: 1px solid #ddd;
+  background: "#f5f5f5";                    /* Light background                       */
+}
 .sections {
-  display: flex;                            /* Flex for horizontal section layout     */
-  flex-wrap: wrap;                          /* Allow wrapping                        */
-  gap: 2rem;                                /* Gap between sections                   */
-  justify-content: center;                  /* Center sections horizontally           */
-  align-items: center;                      /* Center sections vertically             */
-  width: 100%;                              /* Full width                             */
-  margin: 0 auto;                           /* Center in parent                       */
+  display: flex;
+  flex-direction: column;   /* Stack sections vertically */
+  gap: 2rem;                /* Space between sections */
+  width: 100%;              /* Full width of parent */
+  margin: 0 auto;           /* Center in parent if parent is wider */
+  align-items: stretch;     /* Make each section fill the container width */
 }
 
 .section {
-  flex: 1 1 260px;                          /* Flexible width, min 260px              */
-  min-width: 260px;                         /* Minimum width                          */
-  max-width: 320px;                         /* Maximum width                          */
-  background: #f5f7fa;                      /* Section background                     */
-  border-radius: 8px;                       /* Rounded corners                        */
-  padding: 1.5rem 1.2rem;                   /* Section padding                        */
-  box-shadow: 0 1px 6px rgba(60,60,60,0.06);/* Subtle shadow                          */
-  text-align: center;                       /* Center text                            */
-  transition: box-shadow 0.2s;              /* Smooth shadow transition               */
-  margin: 0 auto;                           /* Center in grid/flex                    */
+  width: 100%;              /* Each section fills the available width */
+  min-width: 260px;         /* Minimum width for small screens */
+  margin: 0 auto;           /* Center section if max-width is set */
+  padding: 1.5rem 1.2rem;   /* Section padding */
+  text-align: center;       /* Center text */
+  border: 1px solid #eee;   /* Light border */
+  border-radius: 8px;       /* Optional: rounded corners for modern look */
+  background: #f5f7fa;      /* Optional: subtle background for contrast */
+  box-shadow: 0 1px 6px rgba(60,60,60,0.06); /* Optional: subtle shadow */
 }
 
-.section:hover {
-  box-shadow: 0 4px 18px rgba(60,60,60,0.13);/* Stronger shadow on hover               */
-}
 
 .sectionTitle {
   font-size: 1.3rem;                        /* Section title font size                */
@@ -93,6 +104,13 @@
   color: #1a237e;                           /* Heading color                          */
   margin-bottom: 1.2rem;                    /* Space below heading                    */
   text-align: center;                       /* Center heading text                    */
+}
+.headingNavigation {
+  font-size: 1.5rem;                        /* Main heading font size                 */
+  font-weight: 700;                         /* Bold heading                           */
+  color: #1a237e;                           /* Heading color                          */
+  margin-bottom: 1.2rem;                    /* Space below heading                    */
+  text-align: left;                       /* Center heading text                    */
 }
 
 .intro {
