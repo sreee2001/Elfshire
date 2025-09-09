@@ -10,5 +10,7 @@ export default defineConfig({
   base: '/Elfshire',
   // Register plugins here. The React plugin enables React Fast Refresh and other React-specific features.
   plugins: [react()],
-
+  resolve: {
+    dedupe: ['react', 'react-dom'],
+  },
 })

@@ -57,6 +57,9 @@ const InputDataTable: React.FC<InputDataTableProps> = ({ rows, setRows }) => {
         onChange={handleFileUpload}
         style={{ marginBottom: "1em" }}
       />
+      <button onClick={addRow} style={{ marginTop: "1em" }}>
+        Add Row
+      </button>
       <table>
         <thead>
           <tr>
@@ -90,9 +93,6 @@ const InputDataTable: React.FC<InputDataTableProps> = ({ rows, setRows }) => {
           ))}
         </tbody>
       </table>
-      <button onClick={addRow} style={{ marginTop: "1em" }}>
-        Add Row
-      </button>
     </div>
   );
 };

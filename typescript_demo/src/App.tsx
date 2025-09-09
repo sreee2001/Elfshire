@@ -1,16 +1,13 @@
 import "./App.css";
 import React, { useState } from "react";
-import ChartComponent from "./components/ChartComponent";
-import ChartDemo from "./components/ChartsDemo";
-import InputDataTable from "./components/InputDataTable";
-import type { Row } from "./components/Row";
+import { ChartComponent, ChartsDemo, InputDataTable, type Row } from "shared";
 
 const App: React.FC = () => {
   const [inputData, setInputData] = useState<Row[]>([
     { Label: "Apples", col1: "10", col2: "20", col3: "30" },
-    { Label: "Books", col1: "15", col2: "25", col3: "35" },
-    { Label: "Price of Coffee", col1: "12", col2: "22", col3: "32" },
-    { Label: "Cars in Lot", col1: "18", col2: "28", col3: "38" },
+    { Label: "Books", col1: "3", col2: "25", col3: "35" },
+    { Label: "Price of Coffee", col1: "12", col2: "22", col3: "3" },
+    { Label: "Cars in Lot", col1: "18", col2: "8", col3: "38" },
   ]);
 
   return (
@@ -23,7 +20,8 @@ const App: React.FC = () => {
           {/* InputData table goes here */}
           <InputDataTable rows={inputData} setRows={setInputData} />
           <div style={{ height: "300px", width: "300px" }}>
-            <ChartDemo data={inputData} />
+            <ChartsDemo data={inputData} />
+            {/* <ChartsDemo /> */}
           </div>
         </div>
         <div className="chartContent">

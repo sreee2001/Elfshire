@@ -7,5 +7,12 @@
     { "path": "./tsconfig.app.json" },
     // Reference to the Node (e.g., Vite config) TypeScript config
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "shared": ["../shared/dist"]
+    }
+  }
 }

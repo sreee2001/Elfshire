@@ -43,5 +43,5 @@
     "noUncheckedSideEffectImports": true
   },
   // Include all files in the 'src' directory for type-checking
-  "include": ["src"]
+  "include": ["src", "../shared/src/components/ErrorBoundary.tsx"]
 }
