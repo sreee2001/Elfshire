@@ -16,12 +16,15 @@ const App: React.FC = () => {
   return (
     <>
       <div className="header">
-        <h1>TypeScript Demo</h1>
+        <h2>TypeScript Charts Demo</h2>
       </div>
       <div className="mainContent">
         <div className="inputContent">
           {/* InputData table goes here */}
           <InputDataTable rows={inputData} setRows={setInputData} />
+          <div style={{ height: "300px", width: "300px" }}>
+            <ChartDemo data={inputData} />
+          </div>
         </div>
         <div className="chartContent">
           {/* Charts go here */}
@@ -49,9 +52,6 @@ const App: React.FC = () => {
               title="My Chart"
             />
           </div>
-          <div style={{ height: "300px", width: "300px" }}>
-            <ChartDemo data={inputData} />
-          </div>{" "}
         </div>
       </div>
     </>
