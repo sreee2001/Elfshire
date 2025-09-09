@@ -9,6 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import type { Row } from "./Row";
 
 Chart.register(
   CategoryScale,
@@ -19,13 +20,6 @@ Chart.register(
   Legend
 );
 
-type Row = {
-  Label: string;
-  col2: string;
-  col3: string;
-  col4: string;
-};
-
 type ChartsDemoProps = {
   data: Row[];
 };
@@ -33,14 +27,14 @@ type ChartsDemoProps = {
 const ChartsDemo: React.FC<ChartsDemoProps> = ({ data }) => {
   // Example: Use col2 as values for Bar chart
   const labels = data.map((row) => row.Label);
-  const values = data.map((row) => Number(row.col2) || 0);
+  const Col2Values = data.map((row) => Number(row.col2) || 0);
 
   const barData = {
     labels,
     datasets: [
       {
         label: "Col2 Values",
-        data: values,
+        data: Col2Values,
         backgroundColor: "rgba(75,192,192,0.6)",
       },
     ],
@@ -59,10 +53,16 @@ const ChartsDemo: React.FC<ChartsDemoProps> = ({ data }) => {
 
   return (
     <div>
-      <h3>Bar Chart (Col2)</h3>
-      <Bar data={barData} />
-      <h3>Pie Chart (Col3)</h3>
-      <Pie data={pieData} />
+      <div style={{ display: "flex", gap: "2em" }}>
+        <div style={{ flex: 1 }}>
+          <h3>Bar Chart (Col2)</h3>
+          <Bar data={barData} />
+        </div>
+        <div style={{ flex: 1 }}>
+          <h3>Pie Chart (Col3)</h3>
+          <Pie data={pieData} />
+        </div>
+      </div>
     </div>
   );
 };

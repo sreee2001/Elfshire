@@ -3,17 +3,11 @@ import React, { useState } from "react";
 import ChartComponent from "./components/ChartComponent";
 import ChartDemo from "./components/ChartsDemo";
 import InputDataTable from "./components/InputDataTable";
-
-type Row = {
-  Label: string;
-  col2: string;
-  col3: string;
-  col4: string;
-};
+import type { Row } from "./components/Row";
 
 const App: React.FC = () => {
   const [inputData, setInputData] = useState<Row[]>([
-    { Label: "", col2: "", col3: "", col4: "" },
+    { Label: "", col1: "", col2: "", col3: "" },
   ]);
 
   return (

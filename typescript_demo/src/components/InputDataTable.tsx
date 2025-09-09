@@ -1,12 +1,6 @@
 import React from "react";
 import Papa from "papaparse";
-
-type Row = {
-  Label: string;
-  col1: string;
-  col2: string;
-  col3: string;
-};
+import type { Row } from "./Row";
 
 type InputDataTableProps = {
   rows: Row[];
