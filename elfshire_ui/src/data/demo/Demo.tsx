@@ -2,6 +2,8 @@ import { useState } from "react";
 import commonStyles from "../../styles/CommonSections.module.css";
 import { ChartsDemo, InputDataTable, type Row } from "shared";
 import ErrorBoundary from "shared/src/components/ErrorBoundary";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function HomePage() {
   const [inputData, setInputData] = useState<Row[]>([
@@ -10,6 +12,13 @@ export default function HomePage() {
     { Label: "Price of Coffee", col1: "12", col2: "22", col3: "3" },
     { Label: "Cars in Lot", col1: "18", col2: "8", col3: "38" },
   ]);
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(location.hash.replace("#", ""));
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
 
   return (
     // <div className={commonStyles.container}>
@@ -21,13 +30,10 @@ export default function HomePage() {
         </h1>
         <ul style={{ listStyle: "none", padding: 0 }}>
           <li>
-            <a href="#/demo#input-data">Input Data</a>
+            <a href="#input-data">Input Data</a>
           </li>
           <li>
-            <a href="#/demo#charts">Charts</a>
-          </li>
-          <li>
-            <a href="#/demo">Demo</a>
+            <a href="#charts">Charts</a>
           </li>
           {/* Add more links as needed */}
         </ul>
@@ -42,14 +48,13 @@ export default function HomePage() {
           {/* Input Section */}
           <div className={commonStyles.demosection} id="input-data">
             <div className={commonStyles.sectionTitle}>Input Data</div>
-            {
-              <div className={commonStyles.sectionText}>
-                <InputDataTable rows={inputData} setRows={setInputData} />
-              </div>
-            }
+            <div className={commonStyles.sectionText}>
+              <InputDataTable rows={inputData} setRows={setInputData} />
+            </div>
           </div>
-          <div className={commonStyles.section} id="charts">
+          <div className={commonStyles.demosection} id="charts">
             {/* Display Charts here */}
+            <div className={commonStyles.sectionTitle}>Charts</div>
             <div className={commonStyles.sectionText}>
               <div>
                 <ErrorBoundary>

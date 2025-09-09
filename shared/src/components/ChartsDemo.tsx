@@ -41,7 +41,7 @@ function binData(values: number[], binSize: number) {
 }
 
 const ChartsDemo: React.FC<ChartsDemoProps> = ({ data }) => {
-  console.log("[ChartsDemo] Rendering with data:", data);
+  //console.log("[ChartsDemo] Rendering with data:", data);
   // Example: Use col2 as values for Bar chart
   const labels = data.map((row) => row.Label);
 
@@ -53,9 +53,6 @@ const ChartsDemo: React.FC<ChartsDemoProps> = ({ data }) => {
 
   return (
     <>
-      <div style={{ color: "red", fontWeight: "bold" }}>
-        [ChartsDemo] Rendered
-      </div>
       <div
         style={{ display: "flex", flexDirection: "column", marginTop: "2em" }}
       >
@@ -64,11 +61,11 @@ const ChartsDemo: React.FC<ChartsDemoProps> = ({ data }) => {
             const values = data.map(
               (row) => Number(row[col.key as keyof Row]) || 0
             );
-            console.log(
-              "[ChartsDemo] Rendering ChartBlock for",
-              col.label,
-              values
-            );
+            //console.log(
+            //  "[ChartsDemo] Rendering ChartBlock for",
+            //  col.label,
+            //  values
+            //);
             return (
               <div key={col.key} style={{ marginBottom: "0" }}>
                 <div style={{ display: "flex", gap: "2em" }}>
@@ -88,11 +85,11 @@ const ChartsDemo: React.FC<ChartsDemoProps> = ({ data }) => {
             const values = data.map(
               (row) => Number(row[col.key as keyof Row]) || 0
             );
-            console.log(
-              "[ChartsDemo] Rendering Pie ChartBlock for",
-              col.label,
-              values
-            );
+            //console.log(
+            //  "[ChartsDemo] Rendering Pie ChartBlock for",
+            //  col.label,
+            //  values
+            //);
             return (
               <div key={col.key} style={{ marginBottom: "0" }}>
                 <div style={{ display: "flex", gap: "2em" }}>
