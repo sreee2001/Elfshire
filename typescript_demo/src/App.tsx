@@ -7,7 +7,10 @@ import type { Row } from "./components/Row";
 
 const App: React.FC = () => {
   const [inputData, setInputData] = useState<Row[]>([
-    { Label: "", col1: "", col2: "", col3: "" },
+    { Label: "Apples", col1: "10", col2: "20", col3: "30" },
+    { Label: "Books", col1: "15", col2: "25", col3: "35" },
+    { Label: "Price of Coffee", col1: "12", col2: "22", col3: "32" },
+    { Label: "Cars in Lot", col1: "18", col2: "28", col3: "38" },
   ]);
 
   return (
@@ -22,10 +25,7 @@ const App: React.FC = () => {
         </div>
         <div className="chartContent">
           {/* Charts go here */}
-          <div style={{ height: "300px", width: "300px" }}>
-            <ChartDemo data={inputData} />
-          </div>
-          <div style={{ height: "300px", width: "300px" }}>
+          <div style={{ height: "200px", width: "400px" }}>
             <ChartComponent
               data={{
                 labels: [
@@ -49,6 +49,9 @@ const App: React.FC = () => {
               title="My Chart"
             />
           </div>
+          <div style={{ height: "300px", width: "300px" }}>
+            <ChartDemo data={inputData} />
+          </div>{" "}
         </div>
       </div>
     </>
