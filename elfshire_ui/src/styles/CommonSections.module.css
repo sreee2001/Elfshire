@@ -128,6 +128,7 @@
   border-radius: 8px;       /* Optional: rounded corners for modern look */
   background: #f5f7fa;      /* Optional: subtle background for contrast */
   box-shadow: 0 1px 6px rgba(60,60,60,0.06); /* Optional: subtle shadow */
+  scroll-margin-top: 80px ; /* Adjust to your header/menu height */
 }
 
 

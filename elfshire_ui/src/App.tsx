@@ -12,7 +12,10 @@ import "./App.css";
 
 function App() {
   return (
-    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+    <Router
+      future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+      basename="/Elfshire"
+    >
       <div className={navstyles.navOuter}>
         {/* Company Logo and Name */}
         <div className={logostyles.logoContainer}>
